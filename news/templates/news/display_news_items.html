@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +15,8 @@
       </script>
 </head>
 <body>
+
+<img src="{% static 'images/mars.png' %}"></img>
 <p>current news</p>
   {% for item in items %}
             <div class="col-md-4">
