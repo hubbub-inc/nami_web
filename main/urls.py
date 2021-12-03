@@ -6,7 +6,7 @@ from django.views.generic import TemplateView
 app_name = 'home'
 
 urlpatterns = [
-    path('', views.home, name='home'),
+    path('', views.about, name='home'),
     path('about', views.about),
     path('home/<pk>/', views.service.as_view()),
 
