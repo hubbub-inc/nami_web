@@ -18,9 +18,10 @@
               
               {% for group in groups %}
  <h2>
-		{{group.name}}
-		</h2>
-		<p>{{group.description}}</p>
+
+
+                <a href="/home/{{ group.pk }}">{{  group.name }} </a>
+ </h2>
  {% endfor %}
 
               </div>

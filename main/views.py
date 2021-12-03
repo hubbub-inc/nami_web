@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from django.http import HttpResponse
 from django.views import View
 from .models import TestModel
+from django.views.generic.detail import DetailView
+
 
 def home(request):
     context = {}
@@ -21,6 +23,8 @@ def contact(request):
     template = 'home/contact.html'
     return render(request, template, context)
 
+class service(DetailView):
+    model = TestModel
 
 def services(request):
     groups = TestModel.objects.all()
