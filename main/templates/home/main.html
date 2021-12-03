@@ -1,0 +1,19 @@
+<h1>Using the url tag</h2>
+<ul>
+    <li>
+        <a href="second">
+        hard-coded</a> (not DRY)
+    </li>
+    <li>
+        {% url 'home:first' %}
+        (url 'home:first-view')
+    </li>
+    <li>
+        <a href="{% url 'home:second' %}">
+        url 'home:second-view'</a>
+    </li>
+  
+</ul>
+<p>
+<a href="https://docs.djangoproject.com/en/3.0/ref/templates/builtins/#url" target="_blank">Documentation</a>
+</p>
