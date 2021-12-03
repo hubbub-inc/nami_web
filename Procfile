@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn nami_site.wsgi
+web: gunicorn nami_web.wsgi
