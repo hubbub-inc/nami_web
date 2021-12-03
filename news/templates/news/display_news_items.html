@@ -1,23 +1,17 @@
 {% extends 'base.html' %}
-{% load static %}
+
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>News</title>
-
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-      </script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-      </script>
-</head>
 <body>
+<div class="overlay"></div>
 
-<img src="{% static 'images/mars.png' %}"></img>
-<p>current news</p>
+    <div class="masthead">
+      <div class="masthead-bg"></div>
+      <div class="container h-100">
+        <div class="row h-100">
+
+          <div class="col-12 my-auto">
+            <div class="masthead-content text-white py-5 py-md-0">
+            <p>current news</p>
   {% for item in items %}
             <div class="col-md-4">
                   <img src="{{ item.item_Main_Img.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" />
@@ -27,8 +21,12 @@
             </div>
     {% endfor %}
 
-
-
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
-</html>
+
 {% endblock %}

@@ -18,39 +18,8 @@
   <link rel="stylesheet" type="text/css" href="{% static 'cal/css/styles.css' %}">
   <title>Django Calendar App</title>
   <header class="page-header">
-      <div class="container">
-           <nav class="navbar navbar-expand-sm navbar-light bg-light">
-      <a class="navbar-brand" href="/">Nami</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/events/calendar">Calendar</a>
-            </li>
-           <li class="nav-item">
-            <a class="nav-link" href="">How to Zoom</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/news">News</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="">Education</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-      </div></header>
+
+      {% include 'navbar.html' %}/header>
 </head>
 <body>
 
