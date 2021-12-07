@@ -31,7 +31,12 @@ def about(request):
 
     print(addweek)
     template = 'home/about.html'
-    context['upcoming'] = [{'title': event.title, 'day': str(event.start_time.day), 'month': event.start_time.strftime("%B")} for event in upcoming].reverse()
+    eventlist = [{'title': event.title, 'day': str(event.start_time.day), 'month': event.start_time.strftime("%B")} for event in upcoming]
+    eventlist.reverse()
+    context['upcoming'] = eventlist
+    print(eventlist)
+
+    print('done')
     return render(request, template, context)
 
 
