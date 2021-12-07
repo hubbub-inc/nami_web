@@ -37,78 +37,36 @@
                         Calendar Events
                     </h3>
                 </div>
+
+
                 <div class="panel-body">
                     <ul class="media-list">
+                         {% for event in upcoming %}
                         <li class="media">
                             <div class="media-left">
                                 <div class="panel panel-danger text-center date">
                                     <div class="panel-heading month">
                                         <span class="panel-title strong">
-                                            Mar
+                                            {{ event.month }}
                                         </span>
                                     </div>
                                     <div class="panel-body day text-danger">
-                                        23
+                                      {{ event.day }}
                                     </div>
                                 </div>
                             </div>
                             <div>&nbsp &nbsp &nbsp &nbsp</div>
                             <div class="media-body">
                                 <h4 class="media-heading">
-                                    Pulvinar Mauris Eu
+                                 {{ event.title }}
                                 </h4>
                                 <p>
                                     Vivamus pulvinar mauris eu placerat blandit. In euismod tellus vel ex vestibulum congue.
                                 </p>
                             </div>
                         </li>
-                         <li class="media">
-                            <div class="media-left">
-                                <div class="panel panel-danger text-center date">
-                                    <div class="panel-heading month">
-                                        <span class="panel-title strong">
-                                            Mar
-                                        </span>
-                                    </div>
-                                    <div class="panel-body day text-danger">
-                                        23
-                                    </div>
-                                </div>
-                            </div>
-                            <div>&nbsp &nbsp &nbsp &nbsp</div>
-                            <div class="media-body">
-                                <h4 class="media-heading">
-                                    Pulvinar Mauris Eu
-                                </h4>
-                                <p>
-                                    Vivamus pulvinar mauris eu placerat blandit. In euismod tellus vel ex vestibulum congue.
-                                </p>
-                            </div>
-                        </li>
-                         <li class="media">
-                            <div class="media-left">
-                                <div class="panel panel-danger text-center date">
-                                    <div class="panel-heading month">
-                                        <span class="panel-title strong">
-                                            Mar
-                                        </span>
-                                    </div>
-                                    <div class="panel-body day text-danger">
-                                        23
-                                    </div>
-                                </div>
-                            </div>
-                            <div>&nbsp &nbsp &nbsp &nbsp</div>
-                            <div class="media-body">
-                                <h4 class="media-heading">
-                                    Pulvinar Mauris Eu
-                                </h4>
-                                <p>
-                                    Vivamus pulvinar mauris eu placerat blandit. In euismod tellus vel ex vestibulum congue.
-                                </p>
-                            </div>
-                        </li>
-
+                        {% endfor %}
+                       
                     </ul>
                     <a href="/events/calendar/" class="btn btn-default btn-block">More Events »</a>
                 </div>
