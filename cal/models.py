@@ -1,13 +1,16 @@
 from django.db import models
 from django.urls import reverse
+from main.models import Program
 
-class Event(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.TextField()
+
+        
+class Meeting(models.Model):
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
-
+    program = models.ForeignKey(Program, blank=True, null=True, on_delete=models.SET_NULL)
+    
     @property
     def get_html_url(self):
-        url = reverse('home:prog_name', args=(self.title,))
-        return f'<a href="{url}"> {self.title} </a>'
+        url = reverse('home:program_detail', args=(self.program.pk,))
+      
+        return f'<a href="{url}"> {self.program.name} </a>'

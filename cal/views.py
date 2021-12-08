@@ -8,13 +8,13 @@ import calendar
 
 from .models import *
 from .utils import Calendar
-from .forms import EventForm
+
 
 def index(request):
     return HttpResponse('hello')
 
 class CalendarView(generic.ListView):
-    model = Event
+    model = Meeting
     template_name = 'cal/cal_base.html'
 
     def get_context_data(self, **kwargs):
@@ -47,14 +47,7 @@ def next_month(d):
     return month
 
 def event(request, event_id=None):
-    instance = Event()
+    instance = Meeting()
     if event_id:
-        instance = get_object_or_404(Event, pk=event_id)
-    else:
-        instance = Event()
+        instance = get_object_or_404(Meeting, pk=event_id)
 
-    form = EventForm(request.POST or None, instance=instance)
-    if request.POST and form.is_valid():
-        form.save()
-        return HttpResponseRedirect(reverse('cal:calendar'))
-    return render(request, 'cal/event.html', {'form': form})

@@ -8,8 +8,9 @@ app_name = 'home'
 urlpatterns = [
     path('', views.about, name='home'),
     path('about', views.about),
-    path('home/<str:name>', views.prog_name, name='prog_name'),
     path('home/<int:pk>/', views.service.as_view(), name='program_detail'),
+
+
 
 
     path('services', views.services),

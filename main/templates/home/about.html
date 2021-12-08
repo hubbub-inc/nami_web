@@ -59,9 +59,11 @@
                             </div>
                             <div>&nbsp &nbsp &nbsp &nbsp</div>
                             <div class="media-body">
-                               <a href="{% url 'home:prog_name' name=event.title %}"> <h4 class="media-heading">
-                                 {{ event.title }}
-                                </h4></a>
+                              <h4 class="media-heading">
+                     <a href="{% url 'home:program_detail' pk=event.programid %}">          {{ event.title }}
+                             </a>
+                                
+                                </h4>
                                 <p>
                                     Vivamus pulvinar mauris eu placerat blandit. In euismod tellus vel ex vestibulum congue.
                                 </p>

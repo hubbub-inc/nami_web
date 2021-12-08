@@ -20,7 +20,7 @@
  <h2>
 
 
-                <a href="/home/{{ group.pk }}">{{  group.name }} </a>
+                <a href="{% url 'home:program_detail' pk=group.pk  %}">{{  group.name }}asd </a>
  </h2>
  {% endfor %}
 
