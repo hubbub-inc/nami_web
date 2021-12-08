@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 from django.http import HttpResponse
 from django.views import View
@@ -46,6 +46,11 @@ def contact(request):
 
     template = 'home/contact.html'
     return render(request, template, context)
+
+def prog_name(request, name):
+    program = TestModel.objects.get(name=name)
+    new_path = '/home/' + str(program.pk)
+    return redirect(new_path)
 
 class service(DetailView):
     model = TestModel

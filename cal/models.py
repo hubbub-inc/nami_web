@@ -9,5 +9,5 @@ class Event(models.Model):
 
     @property
     def get_html_url(self):
-        url = reverse('cal:event_edit', args=(self.id,))
+        url = reverse('home:prog_name', args=(self.title,))
         return f'<a href="{url}"> {self.title} </a>'
