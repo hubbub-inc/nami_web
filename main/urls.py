@@ -15,6 +15,5 @@ urlpatterns = [
 
     path('services', views.services),
     path('contact', views.contact),
-    path('news', views.news),
     path('education', views.education),
 ]

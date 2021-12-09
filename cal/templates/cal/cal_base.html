@@ -17,16 +17,15 @@
     crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="{% static 'cal/css/styles.css' %}">
 
-  <header class="page-header">
-
-      {% include 'navbar.html' %}/header>
+  {% include 'navbar.html' %}
 </head>
 <body>
 
 
-  <hr>
+ 
 
   {% block content %}
+ <br /> <br/><br /> <br/><br />
   <div class="clearfix">
 	<a class="btn btn-info left" href="{% url 'cal:calendar' %}?{{ prev_month }}"> Previous Month </a>
 	<a class="btn btn-info right" href="{% url 'cal:calendar' %}?{{ next_month }}"> Next Month </a>

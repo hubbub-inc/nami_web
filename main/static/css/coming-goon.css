@@ -22,7 +22,7 @@ h6 {
         top:0;
     }
     html body {
-     padding-top: 50px;
+     padding-top: 100px;
 	 margin-left: 0px;
     }
 
@@ -34,9 +34,6 @@ body {
 }
 
 
-.page-header {
-	position: relative;
-}
 
 .overlay {
   position: absolute;
