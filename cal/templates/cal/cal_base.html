@@ -16,17 +16,21 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
     crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="{% static 'cal/css/styles.css' %}">
-  <title>Django Calendar App</title>
+
   <header class="page-header">
 
       {% include 'navbar.html' %}/header>
 </head>
 <body>
 
-  <h1 class="title">{% block title %}Calendar{% endblock %}</h1>
+
   <hr>
 
   {% block content %}
+  <div class="clearfix">
+	<a class="btn btn-info left" href="{% url 'cal:calendar' %}?{{ prev_month }}"> Previous Month </a>
+	<a class="btn btn-info right" href="{% url 'cal:calendar' %}?{{ next_month }}"> Next Month </a>
+	</div>
 {{ calendar }}
   {% endblock %}
 
