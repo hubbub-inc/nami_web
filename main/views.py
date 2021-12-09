@@ -13,6 +13,11 @@ def education(request):
     context = {}
     template = 'home/education.html'
     return render(request, template, context)
+    
+def news(request):
+    context = {}
+    template = 'home/news.html'
+    return render(request, template, context)
 
 def home(request):
     context = {}
