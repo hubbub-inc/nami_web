@@ -13,14 +13,14 @@
             <div class="masthead-content text-white py-5 py-md-0">
               <h1 class="mb-3">Programs</h1>
            
-              <p class="mb-5">Name offers the following programs:</p>
+              <p class="mb-5">Nami offers the following programs:</p>
           
               
               {% for group in groups %}
  <h2>
 
 
-                <a href="{% url 'home:program_detail' pk=group.pk  %}">{{  group.name }}asd </a>
+                <a href="{% url 'home:program_detail' pk=group.pk  %}">{{  group.name }} </a>
  </h2>
  {% endfor %}
 
